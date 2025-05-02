@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="game-container">
+    <h1>Hangman</h1>
+
+    <div class="difficulty-selector">
+        <label for="difficulty">Difficulty: </label>
+        <select id="difficulty">
+            <option value="1">Easy (7 mistakes)</option>
+            <option value="2" selected>Medium (6 mistakes)</option>
+            <option value="3">Hard (5 mistakes)</option>
+        </select>
+    </div>
+
+    <div class="hangman-container">
+        <img id="hangman-image" src="resources/hangman-0.png" alt="Hangman stage 0">
+    </div>
+
+    <div class="word-display" id="word-display"></div>
+
+    <div class="message" id="message"></div>
+
+    <div class="used-letters" id="used-letters"></div>
+
+    <div class="input-container">
+        <input type="text" id="guess-input" maxlength="1" placeholder="?">
+        <button id="guess-button">Guess</button>
+    </div>
+
+    <div class="hint-container">
+        <button id="hint-button">Get Hint</button>
+        <div class="hint" id="hint"></div>
+    </div>
+
+    <button id="restart-button">New Game</button>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
